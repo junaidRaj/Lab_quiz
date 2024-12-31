@@ -1,13 +1,13 @@
 #include <iostream>
 using namespace std;
-int minimum(int arr[], int size) {
-    int min = arr[0];
+int largest(int arr[], int size) {
+    int larg = arr[0];
     for (int i = 1; i < size; i++) {
-        if (arr[i] < min) {
-            min = arr[i]; 
+        if (arr[i] > larg) {
+            larg = arr[i]; 
         }
     }
-    return min;
+    return larg;
 }
 
 int main() {
@@ -23,8 +23,8 @@ int main() {
         cin >> arr[i];
     }
 
-    int smallest = minimum(arr, n);
-    cout << "The smallest number in the array is: " << smallest << endl;
+    int result = largest(arr, n);
+    cout << "The largest number in the array is: " << result << endl;
 
     return 0;
 }
